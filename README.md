@@ -2,7 +2,7 @@
 
 A visual dialogue tree editor for creating branching conversations in games and interactive stories. Built with Next.js, React, and TypeScript for CS325.
 
-![Dialogue Builder Screenshot](https://via.placeholder.com/800x400/543A14/FFF0DC?text=Dialogue+Builder+Interface)
+![Dialogue Builder Screenshot](./public/main_for_read_me.png)
 
 ## 🎯 Features
 
