@@ -31,8 +31,8 @@ export function DialogueEditor() {
     (position: { x: number; y: number }) => {
       const newNode: DialogueNode = {
         id: `node_${Date.now()}`,
-        speaker: 'Character',
-        text: 'Enter dialogue here...',
+        speaker: '',
+        text: '',
         choices: [],
         position,
         isStartNode: project.nodes.length === 0, // First node is start node

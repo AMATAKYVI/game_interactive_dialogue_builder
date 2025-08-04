@@ -32,7 +32,7 @@ export function NodeEditor({
   const addChoice = () => {
     const newChoice: DialogueChoice = {
       id: `choice_${Date.now()}`,
-      text: 'New choice...',
+      text: '',
       nextNodeId: null,
     };
 

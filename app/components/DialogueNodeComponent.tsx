@@ -68,11 +68,11 @@ export function DialogueNodeComponent({
             {node.isStartNode ? '🎬 START' : '💬'}
           </span>
           <span
-            className={`font-semibold text-foreground ${
-              isExpanded ? 'text-sm' : 'text-xs'
+            className={`font-semibold ${isExpanded ? 'text-sm' : 'text-xs'} ${
+              node.speaker ? 'text-foreground' : 'text-secondary/60 italic'
             }`}
           >
-            {node.speaker}
+            {node.speaker || 'Unnamed Character'}
           </span>
         </div>
 
@@ -103,8 +103,12 @@ export function DialogueNodeComponent({
         <>
           {/* Dialogue Text */}
           <div className="mb-3 p-2 bg-secondary/5 rounded border-l-2 border-primary/50">
-            <p className="text-sm text-foreground leading-relaxed">
-              {node.text || 'Enter dialogue here...'}
+            <p
+              className={`text-sm leading-relaxed ${
+                node.text ? 'text-foreground' : 'text-secondary/60 italic'
+              }`}
+            >
+              {node.text || 'Click to edit dialogue...'}
             </p>
           </div>
 
