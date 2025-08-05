@@ -19,16 +19,6 @@
   --font-mono: 'Libertinus Sans', Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #131010;
-    --foreground: #ffffff;
-    --primary: #f0bb78;
-    --secondary: #fff0dc;
-    --accent: #fff0dc;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
