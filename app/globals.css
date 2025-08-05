@@ -4,8 +4,8 @@
 :root {
   --background: #131010;
   --foreground: #ffffff;
-  --primary: #f0bb78;
-  --secondary: #543a14;
+  --primary: #543a14;
+  --secondary: #f0bb78;
   --accent: #fff0dc;
 }
 
@@ -21,6 +21,24 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: #ffffff;
   font-family: 'Libertinus Sans', Arial, Helvetica, sans-serif;
+}
+
+/* Force all text to be white by default for cross-browser consistency */
+* {
+  color: #ffffff;
+}
+
+/* Override for specific color classes */
+.text-primary {
+  color: #543a14 !important;
+}
+
+.text-secondary {
+  color: #f0bb78 !important;
+}
+
+.text-foreground {
+  color: #ffffff !important;
 }

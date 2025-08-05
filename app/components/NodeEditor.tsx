@@ -66,7 +66,7 @@ export function NodeEditor({
   return (
     <div className="p-6 h-full overflow-y-auto">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-lg font-bold text-foreground">Edit Node</h2>
+        <h2 className="text-lg font-bold text-white">Edit Node</h2>
         <button
           onClick={onDelete}
           className="px-3 py-1 text-xs bg-red-500/20 text-red-600 rounded hover:bg-red-500/30 transition-colors"
@@ -78,28 +78,28 @@ export function NodeEditor({
       <div className="space-y-6">
         {/* Speaker Name */}
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-2">
+          <label className="block text-sm font-semibold text-white mb-2">
             Speaker Name
           </label>
           <input
             type="text"
             value={localSpeaker}
             onChange={(e) => handleSpeakerChange(e.target.value)}
-            className="w-full p-3 border-2 border-secondary/20 rounded-lg bg-background text-foreground focus:border-primary focus:outline-none"
+            className="w-full p-3 border-2 border-secondary/20 rounded-lg bg-background text-white focus:border-primary focus:outline-none"
             placeholder="Character name..."
           />
         </div>
 
         {/* Dialogue Text */}
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-2">
+          <label className="block text-sm font-semibold text-white mb-2">
             Dialogue Text
           </label>
           <textarea
             value={localText}
             onChange={(e) => handleTextChange(e.target.value)}
             rows={4}
-            className="w-full p-3 border-2 border-secondary/20 rounded-lg bg-background text-foreground focus:border-primary focus:outline-none resize-none"
+            className="w-full p-3 border-2 border-secondary/20 rounded-lg bg-background text-white focus:border-primary focus:outline-none resize-none"
             placeholder="What does this character say?"
           />
         </div>
@@ -107,10 +107,8 @@ export function NodeEditor({
         {/* Start Node Toggle */}
         <div className="flex items-center justify-between p-3 bg-primary/10 rounded-lg border border-primary/20">
           <div>
-            <div className="font-semibold text-foreground text-sm">
-              Start Node
-            </div>
-            <div className="text-xs text-secondary">
+            <div className="font-semibold text-white text-sm">Start Node</div>
+            <div className="text-xs text-white">
               This is where the conversation begins
             </div>
           </div>
@@ -119,8 +117,8 @@ export function NodeEditor({
             disabled={node.isStartNode}
             className={`px-3 py-1 rounded text-xs font-medium transition-colors ${
               node.isStartNode
-                ? 'bg-primary text-foreground'
-                : 'bg-secondary/20 text-secondary hover:bg-secondary hover:text-background'
+                ? 'bg-primary text-white'
+                : 'bg-secondary/20 text-white hover:bg-secondary hover:text-background'
             }`}
           >
             {node.isStartNode ? '✓ START' : 'Set as Start'}
@@ -130,12 +128,12 @@ export function NodeEditor({
         {/* Player Choices */}
         <div>
           <div className="flex items-center justify-between mb-3">
-            <label className="block text-sm font-semibold text-foreground">
+            <label className="block text-sm font-semibold text-white">
               Player Choices
             </label>
             <button
               onClick={addChoice}
-              className="px-3 py-1 bg-primary text-foreground rounded text-xs font-medium hover:bg-primary/80 transition-colors"
+              className="px-3 py-1 bg-primary text-white rounded text-xs font-medium hover:bg-primary/80 transition-colors"
             >
               ➕ Add Choice
             </button>
@@ -148,7 +146,7 @@ export function NodeEditor({
                 className="p-3 border-2 border-secondary/20 rounded-lg bg-background/50"
               >
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-semibold text-secondary">
+                  <span className="text-xs font-semibold text-white">
                     Choice {index + 1}
                   </span>
                   <button
@@ -165,12 +163,12 @@ export function NodeEditor({
                     updateChoice(choice.id, { text: e.target.value })
                   }
                   rows={2}
-                  className="w-full p-2 text-sm border border-secondary/20 rounded bg-background text-foreground focus:border-primary focus:outline-none resize-none mb-2"
+                  className="w-full p-2 text-sm border border-secondary/20 rounded bg-background text-white focus:border-primary focus:outline-none resize-none mb-2"
                   placeholder="Player choice text..."
                 />
 
                 <div>
-                  <label className="block text-xs font-semibold text-secondary mb-1">
+                  <label className="block text-xs font-semibold text-white mb-1">
                     Next Node
                   </label>
                   <select
@@ -180,7 +178,7 @@ export function NodeEditor({
                         nextNodeId: e.target.value || null,
                       })
                     }
-                    className="w-full p-2 text-sm border border-secondary/20 rounded bg-background text-foreground focus:border-primary focus:outline-none"
+                    className="w-full p-2 text-sm border border-secondary/20 rounded bg-background text-white focus:border-primary focus:outline-none"
                   >
                     <option value="">End conversation</option>
                     {allNodes
@@ -198,7 +196,7 @@ export function NodeEditor({
           </div>
 
           {node.choices.length === 0 && (
-            <div className="text-center p-6 text-secondary/60 bg-secondary/5 rounded-lg border border-secondary/10">
+            <div className="text-center p-6 text-white bg-secondary/5 rounded-lg border border-secondary/10">
               <div className="text-2xl mb-2">💭</div>
               <div className="text-sm">No choices yet</div>
               <div className="text-xs">

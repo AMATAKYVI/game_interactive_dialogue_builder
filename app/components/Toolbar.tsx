@@ -94,7 +94,7 @@ export function Toolbar({
           <button
             onClick={onStartPlaytest}
             disabled={!project.startNodeId}
-            className="px-4 py-2 bg-secondary text-background rounded-lg hover:bg-secondary/80 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 bg-primary text-background rounded-lg hover:bg-secondary/80 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
           >
             ▶️ Playtest
           </button>
